@@ -1,0 +1,55 @@
+html,
+body {
+    background-color: #ccc !important;
+}
+
+div.container {
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: 0 0 10px 0 lightskyblue;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+div.single_task {
+    margin: 10px;
+}
+
+div.update_task {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    column-gap: 10px;
+}
+
+div.update_task label {
+    padding: 25% 0;
+}
+
+div.update_task #id_status {
+    margin: 15% 0 0 0 !important;
+}
+
+div.delete_modal_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+div.single_task {
+    display: grid;
+    grid-template-columns: 700px 1fr 1fr;
+    column-gap: 10px;
+
+}
+
+button.cancelButton {
+    margin: 8px 0;
+    padding: 6px 12px;
+}
+
+input {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0 !important;
+}

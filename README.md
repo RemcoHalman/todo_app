@@ -1,0 +1,1 @@
+##### A small Todo app created with Django 3.0
