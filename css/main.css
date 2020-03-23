@@ -4,11 +4,12 @@ body {
 }
 
 div.container {
-    background-color: white;
+    background-color: #eee;
     margin-top: 10px;
     box-shadow: 0 0 10px 0 lightskyblue;
     padding-bottom: 10px;
     padding-top: 10px;
+    border-radius: 10px;
 
 }
 
@@ -38,7 +39,7 @@ div.delete_modal_form {
 
 div.single_task {
     display: grid;
-    grid-template-columns: 700px 1fr 1fr;
+    grid-template-columns: 700px 1fr;
     column-gap: 10px;
 
 }
