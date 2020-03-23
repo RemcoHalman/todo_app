@@ -37,9 +37,33 @@ def updateView(request, pk):
 def deleteView(request, pk):
     task = Task.objects.get(id=pk)
 
-    if request.method == 'POST':
+    if request:
         task.delete()
         return redirect('/')
 
     context = {'task': task, 'title': "Delete view"}
-    return render(request, 'delete.html', context)
+    return render(request, 'home.html', context)
+
+
+def complete_task(request, pk):
+    task = Task.objects.get(id=pk)
+
+    if request:
+        task.status = True
+        task.save()
+        return redirect('/')
+
+    context = {'task': task, }
+    return render(request, 'home.html', context)
+
+
+def uncomplete_task(request, pk):
+    task = Task.objects.get(id=pk)
+
+    if request:
+        task.status = False
+        task.save()
+        return redirect('/')
+
+    context = {'task': task, }
+    return render(request, 'home.html', context)

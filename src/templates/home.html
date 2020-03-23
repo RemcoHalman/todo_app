@@ -10,51 +10,21 @@
 
 {% for task in tasks %}
 <hr>
-
 <div class="single_task">
     <!-- Task -->
     {% if task.status == True %}
     <s>
-        {{ task.description }}
+        <a href="{% url 'uncomplete_task' task.id %}" class="text-reset">{{ task.description }}</a>
     </s>
     {% else %}
-    <span>{{ task.description }}</span>
+    <a href="{% url 'complete_task' task.id %}" class="text-reset"><span>{{ task.description }}</a>
     {% endif %}
-    <!-- Buttons -->
-
-    <a class="btn btn-sm btn-info" href="{% url 'update_task' task.id %}">update</a>
-    <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#deleteModal">
-        Delete
-    </button>
-    <!-- Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Are you sure you want to delete {{ task.description }}?
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-footer">
-                    <form action="{% url 'delete_task' task.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="delete_modal_form"><button href="" type="button"
-                                class="btn btn-secondary cancelButton" data-dismiss="modal">
-                                Cancel
-                            </button>
-                            <input class="btn btn-primary" type="submit" value="Delete" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <a href="{% url 'delete_task' task.id %}">
+        <button type="button" class="btn btn-sm btn-warning w-100">
+            Delete
+        </button>
+    </a>
 </div>
 
 {% endfor %}
-<hr style="border: 0;">
 {% endblock %}
