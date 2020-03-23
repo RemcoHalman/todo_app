@@ -1,3 +1,4 @@
+import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'TodoApp.urls'
+ROOT_URLCONF = 'todoapp.urls'
 
 TEMPLATES = [
     {
@@ -56,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'TodoApp.wsgi.application'
+WSGI_APPLICATION = 'todoapp.wsgi.application'
 
 
 # Database
@@ -101,5 +102,4 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
-import django_heroku
 django_heroku.settings(locals())
