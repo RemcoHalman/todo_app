@@ -54,3 +54,6 @@ venv.bak/
 
 # Project specific #
 ####################
+Procfile
+runtime.txt
+requirements.txt
