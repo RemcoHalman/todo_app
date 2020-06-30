@@ -54,10 +54,3 @@ venv.bak/
 
 # Project specific #
 ####################
-<<<<<<< HEAD
-Procfile
-=======
-Procfile
-runtime.txt
-requirements.txt
->>>>>>> ee6d8cc9966afb555d8c5ec9bef1551ac44fc786
