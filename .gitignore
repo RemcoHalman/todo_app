@@ -54,12 +54,9 @@ venv.bak/
 
 # Project specific #
 ####################
-old/
 venv
 *.pyc
 staticfiles
-.env
 db.sqlite3
-getting-started/*
 core
-migrations/*
+migrations/
